@@ -59,7 +59,8 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 //Movement Contact.html in complete
-document.addEventListener("DOMContentLoaded", function () {
+/*
+ document.addEventListener("DOMContentLoaded", function () {
   const sendBtn = document.getElementById("submitButton");
 
   if (sendBtn) {
@@ -69,3 +70,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+*/

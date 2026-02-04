@@ -10993,3 +10993,40 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+#mainNav .navbar-brand.brand-hover{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+}
+
+#mainNav .brand-logo{
+  height:28px;
+  width:auto;
+  display:block;
+  transition:transform .2s ease, filter .2s ease;
+}
+
+#mainNav .brand-text{
+  font-weight:700;
+  transition:color .2s ease;
+}
+
+#mainNav .navbar-brand.brand-hover:hover .brand-text{
+  color:#ff6b3d;
+}
+
+#mainNav .navbar-brand.brand-hover:hover .brand-logo{
+  transform:scale(1.06);
+  filter:brightness(1.15);
+}
+
+/* 스크롤 시 shrink 상태에서도 hover 유지 */
+#mainNav.navbar-shrink .navbar-brand.brand-hover:hover .brand-text{
+  color:#ff6b3d;
+}
+
+.brand-logo {
+  height: 28px;
+  display: inline-block;
+}

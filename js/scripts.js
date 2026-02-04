@@ -57,3 +57,15 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+//Movement Contact.html in complete
+document.addEventListener("DOMContentLoaded", function () {
+  const sendBtn = document.getElementById("submitButton");
+
+  if (sendBtn) {
+    sendBtn.addEventListener("click", function () {
+      // 여기서 원하는 페이지로 이동
+      window.location.href = "contact.html";
+    });
+  }
+});

@@ -228,39 +228,40 @@
       <div class="col-lg-6">
 
         <!-- Netlify Form -->
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/contact.html"
-        >
-          <input type="hidden" name="form-name" value="contact" />
+        <form 
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/contact.html"
+>
+        <input type="hidden" name="form-name" value="contact" />
 
-          <!-- 봇 방지용 (숨김) -->
-          <p class="d-none">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
+        <p style="display:none;">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
 
-          <div class="form-floating mb-3">
-            <input class="form-control" name="name" type="text" placeholder="이름" required />
-            <label>이름</label>
-          </div>
+        <div class="form-floating mb-3">
+        <input class="form-control" name="name" type="text" placeholder="이름" required />
+        <label>이름</label>
+    </div>
 
-          <div class="form-floating mb-3">
-            <input class="form-control" name="email" type="email" placeholder="이메일" required />
-            <label>이메일</label>
-          </div>
+        <div class="form-floating mb-3">
+        <input class="form-control" name="email" type="email" placeholder="이메일" required />
+        <label>이메일</label>
+    </div>
 
-          <div class="form-floating mb-3">
-            <textarea class="form-control" name="message" placeholder="메시지" style="height: 10rem" required></textarea>
-            <label>메시지</label>
-          </div>
+    <div class="form-floating mb-3">
+        <textarea class="form-control" name="message" placeholder="메시지" style="height:10rem" required></textarea>
+        <label>메시지</label>
+  </div>
 
-          <div class="d-grid">
-            <button class="btn btn-primary btn-xl" type="submit">보내다</button>
-          </div>
-        </form>
+    <div class="d-grid">
+        <button class="btn btn-primary btn-xl" type="submit">SEND</button>
+    </div>
+
+</form>
+
         <!-- /Netlify Form -->
 
       </div>

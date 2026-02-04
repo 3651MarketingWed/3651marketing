@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>문의 관리자 | 365웰빙</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+
+  <!-- Netlify Identity 위젯 -->
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script defer src="/admin/admin.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="left">
+      <h1>문의 관리자</h1>
+      <div class="sub">Netlify Forms 기반</div>
+    </div>
+    <div class="right">
+      <button id="loginBtn" class="btn">로그인</button>
+      <button id="logoutBtn" class="btn btn-ghost" style="display:none;">로그아웃</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls">
+      <input id="q" class="input" placeholder="검색: 이름/이메일/메시지" />
+      <select id="statusFilter" class="select">
+        <option value="ALL">상태: 전체</option>
+        <option value="NEW">NEW</option>
+        <option value="IN_PROGRESS">IN_PROGRESS</option>
+        <option value="DONE">DONE</option>
+      </select>
+      <button id="refreshBtn" class="btn">새로고침</button>
+      <span id="hint" class="hint"></span>
+    </section>
+
+    <section class="tableWrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>접수일</th>
+            <th>이름</th>
+            <th>이메일</th>
+            <th>메시지</th>
+            <th>상태</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="5" class="muted">로그인 후 목록이 표시됩니다.</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

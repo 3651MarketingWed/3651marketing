@@ -222,7 +222,7 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                       
+                        <!--
                         <form 
                             name="contact"
                             method="POST"
@@ -255,6 +255,35 @@
                 <button class="btn btn-primary btn-xl" type="submit">보내다</button>
              </div>
         </form>
+    -->    <!--여기는 개발 코드 부분 나중에 위에 것 남기고  밑에거 지우기-->     
+          <form method="POST" action="/contact.html">
+            <input type="hidden" name="form-name" value="contact" />
+
+                            <p style="display:none;">
+                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                            </p>
+
+                             <div class="form-floating mb-3">
+                            <input class="form-control" name="name" type="text" placeholder="이름" required />
+                            <label>이름</label>
+                            </div>
+
+                                <div class="form-floating mb-3">
+                                <input class="form-control" name="email" type="email" placeholder="이메일" required />
+                                <label>이메일</label>
+                                    </div>
+
+                                <div class="form-floating mb-3">
+                                <textarea class="form-control" name="message" placeholder="메시지" style="height:10rem" required></textarea>
+                                <label>메시지</label>
+                                </div>
+
+                            <div class="d-grid">
+                <button class="btn btn-primary btn-xl" type="submit">보내다</button>
+             </div>
+  
+        </form>
+         <!--여기까지 -->
 
                     
                             

@@ -26,7 +26,8 @@ exports.handler = async (event) => {
 
     const submissions = await netlifyFetch(`/forms/${formId}/submissions?per_page=100`, API_TOKEN);
 
-    const store = getStore("ticket-status");
+    const store = getStore("ticket-status", { siteID: SITE_ID, token: API_TOKEN });
+
 
     const withStatus = await Promise.all(
       submissions.map(async (s) => {

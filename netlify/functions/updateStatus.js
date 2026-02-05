@@ -22,7 +22,10 @@ exports.handler = async (event) => {
     if (!submissionId) return badRequest("submissionId is required");
     if (!ALLOWED.has(status)) return badRequest("status must be one of NEW/IN_PROGRESS/DONE");
 
-    const store = getStore("ticket-status");
+    const SITE_ID = process.env.NETLIFY_SITE_ID;
+    const API_TOKEN = process.env.NETLIFY_API_TOKEN;
+    const store = getStore("ticket-status", { siteID: SITE_ID, token: API_TOKEN });
+
     await store.set(
       `status:${submissionId}`,
       { status, updatedAt: new Date().toISOString() },

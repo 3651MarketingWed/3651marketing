@@ -4,12 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>문의 관리자 | 365웰빙</title>
-  
-
-  <!-- Netlify Identity 위젯 -->
   <link rel="stylesheet" href="./admin.css" />
-  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script defer src="/admin/admin.js"></script>
+  <script defer src="./admin.js"></script>
 </head>
 <body>
   <header class="topbar">
@@ -18,20 +14,23 @@
       <div class="sub">Netlify Forms 기반</div>
     </div>
     <div class="right">
-      <button id="loginBtn" class="btn">로그인</button>
       <button id="logoutBtn" class="btn btn-ghost" style="display:none;">로그아웃</button>
     </div>
   </header>
 
   <main class="wrap">
     <section class="controls">
-      <input id="q" class="input" placeholder="검색: 이름/이메일/메시지" />
-      <select id="statusFilter" class="select">
+      <input id="adminKey" class="input" type="password" placeholder="관리자 비밀번호" />
+      <button id="unlockBtn" class="btn">접속</button>
+
+      <input id="q" class="input" placeholder="검색: 이름/이메일/메시지" style="margin-left:12px; flex:1;" />
+      <select id="statusFilter" class="select" style="width:160px;">
         <option value="ALL">상태: 전체</option>
         <option value="NEW">NEW</option>
         <option value="IN_PROGRESS">IN_PROGRESS</option>
         <option value="DONE">DONE</option>
       </select>
+
       <button id="refreshBtn" class="btn">새로고침</button>
       <span id="hint" class="hint"></span>
     </section>
@@ -48,7 +47,7 @@
           </tr>
         </thead>
         <tbody id="tbody">
-          <tr><td colspan="5" class="muted">로그인 후 목록이 표시됩니다.</td></tr>
+          <tr><td colspan="5" class="muted">비밀번호 입력 후 “접속”을 누르세요.</td></tr>
         </tbody>
       </table>
     </section>

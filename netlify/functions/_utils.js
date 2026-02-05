@@ -1,14 +1,18 @@
-// netlify/functions/_utils.js
 const API_BASE = "https://api.netlify.com/api/v1";
 
-function requireAuth(context) {
-  const user = context?.clientContext?.user;
-  if (!user) {
+function requireAdminKey(event) {
+  const got = event.headers["x-admin-key"] || event.headers["X-Admin-Key"];
+  const expected = process.env.ADMIN_KEY;
+  if (!expected) {
+    const err = new Error("ADMIN_KEY 미설정");
+    err.statusCode = 500;
+    throw err;
+  }
+  if (!got || got !== expected) {
     const err = new Error("Unauthorized");
     err.statusCode = 401;
     throw err;
   }
-  return user;
 }
 
 function json(statusCode, bodyObj) {
@@ -51,7 +55,6 @@ async function netlifyFetch(path, token, options = {}) {
   return res.text();
 }
 
-// forms list에서 name으로 form id 찾기
 async function getFormIdByName({ siteId, token, formName }) {
   const forms = await netlifyFetch(`/sites/${siteId}/forms`, token);
   const found = forms.find((f) => f?.name === formName);
@@ -59,7 +62,7 @@ async function getFormIdByName({ siteId, token, formName }) {
 }
 
 module.exports = {
-  requireAuth,
+  requireAdminKey,
   json,
   badRequest,
   serverError,

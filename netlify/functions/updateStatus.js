@@ -1,12 +1,11 @@
-// netlify/functions/updateStatus.js
 const { getStore } = require("@netlify/blobs");
-const { requireAuth, json, badRequest, serverError } = require("./_utils");
+const { requireAdminKey, json, badRequest, serverError } = require("./_utils");
 
 const ALLOWED = new Set(["NEW", "IN_PROGRESS", "DONE"]);
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   try {
-    requireAuth(context);
+    requireAdminKey(event);
 
     if (event.httpMethod !== "POST") {
       return json(405, { ok: false, error: "Method not allowed" });
@@ -24,7 +23,11 @@ exports.handler = async (event, context) => {
     if (!ALLOWED.has(status)) return badRequest("status must be one of NEW/IN_PROGRESS/DONE");
 
     const store = getStore("ticket-status");
-    await store.set(`status:${submissionId}`, { status, updatedAt: new Date().toISOString() }, { type: "json" });
+    await store.set(
+      `status:${submissionId}`,
+      { status, updatedAt: new Date().toISOString() },
+      { type: "json" }
+    );
 
     return json(200, { ok: true });
   } catch (err) {

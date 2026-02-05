@@ -28,9 +28,7 @@ exports.handler = async (event, context) => {
 
     // submissions 가져오기(최신 100개)
     // Netlify API에 따라 per_page/page 지원. (확인 필요: 계정/환경에 따라 다를 수 있음)
-    const headers = {
-      Authorization: `Bearer ${process.env.NETLIFY_API_TOKEN}`,
-    };
+   
 
     const submissions = await netlifyFetch(`/forms/${formId}/submissions?per_page=100`, API_TOKEN);
 

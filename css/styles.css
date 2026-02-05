@@ -11030,3 +11030,116 @@ header.masthead h1, header.masthead .h1 {
   height: 28px;
   display: inline-block;
 }
+/* Testimonials section */
+.wb-testimonials{
+  background:#0b0b0c;
+  padding: 80px 0;
+  color:#fff;
+}
+
+.wb-badge{
+  background: rgba(255,255,255,0.10);
+  color:#fff;
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.wb-title{
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.wb-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.wb-card-lg{ padding: 28px; }
+
+.wb-avatar{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.wb-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffcc66;
+  display: inline-block;
+}
+
+.wb-company{
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+}
+
+.wb-quote{
+  font-size: 22px;
+  line-height: 1.35;
+  margin: 10px 0 14px;
+  color: rgba(255,255,255,0.95);
+}
+
+.wb-name{
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+}
+
+.wb-role{
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+}
+
+.wb-stat{
+  background: rgba(0,0,0,0.30);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 14px;
+  height: 100%;
+}
+
+.wb-stat-value{
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.wb-stat-label{
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 4px;
+}
+
+.wb-card-sm{
+  padding: 22px;
+}
+
+.wb-stars{
+  color: #ffcc66;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.wb-small-text{
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+
+.wb-small-name{
+  font-weight: 800;
+}
+
+.wb-small-role{
+  font-size: 12px;
+  color: rgba(255,255,255,0.60);
+}

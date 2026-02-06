@@ -11159,3 +11159,37 @@ header.masthead h1, header.masthead .h1 {
   transform: scale(1.12);
   opacity:1;
 }
+/* 왼쪽 브랜드 영역을 세로 정렬 */
+.footer-brand-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* PC */
+  gap: 10px;
+}
+
+/* 인스타 아이콘 크게 */
+.footer-instagram-lg {
+  font-size: 42px;   /* ← 여기서 크기 조절 */
+  color: #000;
+  text-decoration: none;
+  line-height: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-instagram-lg:hover {
+  transform: scale(1.12);
+  opacity: 0.7;
+}
+
+/* 회사명 */
+.footer-company-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 991px) {
+  .footer-brand-stack {
+    align-items: center;
+    text-align: center;
+  }
+}

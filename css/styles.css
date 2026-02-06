@@ -11169,7 +11169,7 @@ header.masthead h1, header.masthead .h1 {
 
 /* 인스타 아이콘 크게 */
 .footer-instagram-lg {
-  font-size: 42px;   /* ← 여기서 크기 조절 */
+  font-size: 48px;   /* ← 여기서 크기 조절 */
   color: #000;
   text-decoration: none;
   line-height: 1;
@@ -11186,10 +11186,4 @@ header.masthead h1, header.masthead .h1 {
   font-size: 16px;
   font-weight: 700;
   color: #000;
-}
-@media (max-width: 991px) {
-  .footer-brand-stack {
-    align-items: center;
-    text-align: center;
-  }
 }

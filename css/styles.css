@@ -11143,3 +11143,19 @@ header.masthead h1, header.masthead .h1 {
   font-size: 12px;
   color: rgba(255,255,255,0.60);
 }
+/*인스타그렘 이미지 추가로 인해 생기느 색감*/
+.ig-fa{
+  display:inline-flex;
+  align-items:center;
+  margin-right:10px;
+  font-size:20px;
+  color:inherit;
+  text-decoration:none;
+  opacity:0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.ig-fa:hover{
+  transform: scale(1.12);
+  opacity:1;
+}

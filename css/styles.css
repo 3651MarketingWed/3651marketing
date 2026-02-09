@@ -11187,3 +11187,31 @@ header.masthead h1, header.masthead .h1 {
   font-weight: 700;
   color: #000;
 }
+/* Price 섹션 후기 이미지 안쓸 듯 */
+#Price .price-proof-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+/* Price 섹션 배경을 이미지로 꽉 채우기 */
+#Price.price-cover{
+  min-height: 85vh;
+  background-image: url("../assets/img/portfolio/fullsize/reviews.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 글자 가독성용 오버레이 */
+#Price .price-cover-inner{
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,.35);
+}
+
+
+

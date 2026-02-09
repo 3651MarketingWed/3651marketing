@@ -1,3 +1,4 @@
 ﻿[build]
-  publish = "3651marketing"
-  functions = "3651marketing/netlify/functions"
+publish = "."
+functions = "netlify/functions"
+

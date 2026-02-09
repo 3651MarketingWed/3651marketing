@@ -11188,7 +11188,7 @@ header.masthead h1, header.masthead .h1 {
   color: #000;
 }
 /* Price 섹션 후기 이미지 안쓸 듯 */
-#Price .price-proof-img{
+#Review .review-proof-img{
   width: 100%;
   height: auto;
   display: block;
@@ -11197,7 +11197,7 @@ header.masthead h1, header.masthead .h1 {
 }
 
 /* Price 섹션 배경을 이미지로 꽉 채우기 */
-#Price.price-cover{
+#Review.review-cover{
   min-height: 85vh;
   background-image: url("../assets/img/portfolio/fullsize/reviews.jpg");
   background-size: cover;
@@ -11206,7 +11206,7 @@ header.masthead h1, header.masthead .h1 {
 }
 
 /* 글자 가독성용 오버레이 */
-#Price .price-cover-inner{
+#Review .review-cover-inner{
   min-height: 85vh;
   display: flex;
   align-items: center;

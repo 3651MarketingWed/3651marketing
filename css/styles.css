@@ -11212,6 +11212,123 @@ header.masthead h1, header.masthead .h1 {
   align-items: center;
   background: rgba(0,0,0,.35);
 }
+/* Review2 (orange template style) */
+.review2-wrap{
+  padding: 90px 0;
+  background: #ff7a1a; /* 주황 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 살짝 질감(원하면 삭제) */
+.review2-wrap::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.08;
+  background:
+    radial-gradient(circle at 20% 10%, #ffffff 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 20%, #ffffff 0 2px, transparent 3px),
+    radial-gradient(circle at 30% 80%, #ffffff 0 2px, transparent 3px);
+  pointer-events:none;
+}
+
+.review2-header{
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+
+.review2-mascot{
+  width: 92px;
+  height: auto;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.review2-title{
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 2px 0 rgba(0,0,0,.08);
+}
+
+/* Grid */
+.review2-grid{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  margin-top: 22px;
+}
+
+/* 카드 */
+.review2-card{
+  margin: 0;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.25);
+  box-shadow: 0 18px 38px rgba(0,0,0,.18);
+}
+
+/* 이미지 */
+.review2-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+/* 말풍선/라벨 (첫 이미지 느낌의 흰 박스) */
+.review2-badge{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  background: #fff;
+  color: #111;
+  border: 3px solid #111;
+  border-radius: 10px;
+  padding: 14px 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,.22);
+}
+
+/* 배치: 첫 긴 포스터 느낌(가변 레이아웃) */
+.review2-card:nth-child(1){ grid-column: 1 / span 6; min-height: 520px; }
+.review2-card:nth-child(2){ grid-column: 7 / span 6; min-height: 520px; }
+.review2-card:nth-child(3){ grid-column: 1 / span 4; min-height: 360px; }
+.review2-card:nth-child(4){ grid-column: 5 / span 4; min-height: 360px; }
+.review2-card:nth-child(5){ grid-column: 9 / span 4; min-height: 360px; }
+
+/* 모바일 */
+@media (max-width: 991.98px){
+  .review2-grid{
+    grid-template-columns: 1fr;
+  }
+  .review2-card:nth-child(1),
+  .review2-card:nth-child(2),
+  .review2-card:nth-child(3),
+  .review2-card:nth-child(4),
+  .review2-card:nth-child(5){
+    grid-column: auto;
+    min-height: 420px;
+  }
+  .review2-badge{
+    font-size: 16px;
+    padding: 12px;
+  }
+}
 
 
 
